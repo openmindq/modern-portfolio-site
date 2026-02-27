@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="particle-canvas"></canvas>
+    
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
@@ -34,8 +36,9 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="badge">v1.2.0 is out</div>
                 <h1 class="hero-title">
-                    Build Software at the <span class="gradient-text">Speed of Thought</span>
+                    Build Software at the <br><span class="gradient-text">Speed of Thought</span>
                 </h1>
                 <p class="hero-description">
                     The autonomous AI engineering agent that turns your natural language prompts into production-ready code, repo management, and seamless deployments.
@@ -194,13 +197,8 @@
                             </div>
                             <div class="terminal-title">OpenMind Shell</div>
                         </div>
-                        <div class="terminal-body">
-                            <p><span class="prompt">$</span> openmind chat "Create a REST API"</p>
-                            <p class="response">✓ Plan created (plan.md)</p>
-                            <p class="response">✓ GitHub repo initialized</p>
-                            <p class="response">✓ API endpoints written</p>
-                            <p class="response">✓ Tests added</p>
-                            <p class="response">🚀 Deployed successfully!</p>
+                        <div class="terminal-body" id="terminal-body">
+                            <!-- Animated by JS -->
                         </div>
                     </div>
                 </div>
