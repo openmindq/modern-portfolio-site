@@ -29,6 +29,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Root dizinindeki tüm dosyaları (index.html, style.css, script.js) paketle
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
